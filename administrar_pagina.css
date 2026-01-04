@@ -1,0 +1,97 @@
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= BODY ================= */
+body {
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
+}
+
+/* ================= CONTENEDOR PRINCIPAL ================= */
+#cuerpo {
+    background-color: cadetblue;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* ================= TITULOS RESPONSIVE ================= */
+h1 {
+    font-size: clamp(48px, 10vw, 120px);
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: clamp(32px, 6vw, 60px);
+    text-align: center;
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: clamp(24px, 4vw, 40px);
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* ================= TABLA ================= */
+table {
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+/* ================= CELDAS ================= */
+td {
+    padding: 15px;
+    text-align: center;
+    font-size: clamp(16px, 3vw, 25px);
+    border: 1px solid black;
+}
+
+/* ================= ENLACES ================= */
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover {
+    color: cadetblue;
+    text-decoration: underline;
+}
+
+/* ================= MOVIL ================= */
+@media (max-width: 600px) {
+    table {
+        width: 90%;
+    }
+
+    td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px){
+    table {
+        width: 80%;
+    
+    }
+
+}
+

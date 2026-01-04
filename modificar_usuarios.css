@@ -1,0 +1,95 @@
+/* Contenedor principal */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
+    color: black
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    margin: 30px 0 15px;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Lista */
+ul {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Cada usuario */
+ul li {
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 20px;
+}
+
+/* Hover */
+ul li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Enlace */
+ul li a {
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+/* ID del usuario */
+ul li span.id {
+    color: black;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 50px;
+        /* Reducir tamaño del título */
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    ul {
+        max-width: 90%;
+        /* Ajusta el ancho de la lista */
+        padding: 0 10px;
+    }
+
+    ul li {
+        font-size: 16px;
+        /* Texto más pequeño */
+        padding: 10px;
+    }
+
+    ul li a {
+        padding: 10px;
+    }
+
+    ul li span.id {
+        font-size: 16px;
+    }
+}

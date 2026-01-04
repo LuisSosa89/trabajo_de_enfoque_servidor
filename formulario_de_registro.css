@@ -1,0 +1,252 @@
+/* ----------------- Estilo general ----------------- */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ----------------- Cabecera ----------------- */
+#cabecera {
+    background-color: cadetblue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ----------------- Cuerpo ----------------- */
+#cuerpo {
+    background-color: cadetblue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+/* ----------------- Formulario ----------------- */
+#caja_formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 50px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+#caja_formulario input,
+#caja_formulario select {
+    width: 100%;
+    max-width: 1000px;
+    /* límite en escritorio */
+    height: 38px;
+    /* altura cómoda, no gigante */
+    font-size: 14px;
+    padding: 6px 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+
+
+
+
+/* ----------------- Botones ----------------- */
+.botones_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* espacio entre botones */
+    flex-wrap: wrap;
+    /* se acomoda en móviles */
+    margin-top: 20px;
+}
+
+#botones,
+#botones2 {
+    background-color: black;
+    color: white;
+    height: 45px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    transition: transform 0.3s;
+}
+
+#botones:hover,
+#botones2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* ----------------- Footer ----------------- */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: cadetblue;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Texto del footer */
+#parrafo_footer p {
+    margin: 1px;
+    font-size: 18px;
+    color: black;
+}
+
+/* Logo de redes sociales */
+#logo_footer {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#logo_footer img {
+    width: 40px;
+    height: 40px;
+}
+
+/* ----------------- Responsive ----------------- */
+
+/* Móviles (<=480px) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #botones,
+    #botones2 {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    /* Campos del formulario */
+    #caja_formulario input,
+    #caja_formulario select {
+        width: 100%;
+        max-width: 280px;
+        /* límite en escritorio */
+        height: 38px;
+        /* altura cómoda, no gigante */
+        font-size: 14px;
+        padding: 6px 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border-radius: 6px;
+        border: 1px solid #333;
+    }
+
+    #parrafo_footer p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logo_footer {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #botones,
+    #botones2 {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+
+
+    #caja_formulario {
+        width: 80%;
+        padding: 20px;
+    }
+
+    #parrafo_footer p {
+        font-size: 16px;
+    }
+}
+
+/* Escritorio (>768px) */
+@media screen and (min-width: 769px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #botones,
+    #botones2 {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    #caja_formulario {
+        width: 400px;
+    }
+
+    #parrafo_footer p {
+        font-size: 18px;
+    }
+}

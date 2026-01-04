@@ -1,0 +1,177 @@
+/* ================== ESTILO GENERAL ================== */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================== CUERPO ================== */
+#cuerpo {
+    background-color: cadetblue;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ================== TITULOS ================== */
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px; 
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* ================== ENLACES ================== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================== FORMULARIO ================== */
+form {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+fieldset {
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* ================== BOTONES ================== */
+#botones,
+#botones2 {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* Efecto hover */
+#botones:hover,
+#botones2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+/* ================== RESPONSIVE ================== */
+
+/* Pantallas pequeñas: móviles hasta 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    fieldset {
+        width: 90%;
+        padding: 5px;
+    }
+
+    #botones,
+    #botones2 {
+        width: 70px;
+        height: 25px;
+        font-size: 13px;
+    }
+}
+
+/* Pantallas medianas: tablets 481px a 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    form {
+        width: 80%;
+        padding: 25px;
+    }
+
+    #botones,
+    #botones2 {
+        width: 80px;
+        height: 28px;
+        font-size: 14px;
+    }
+}
+
+/* Pantallas grandes: 769px a 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 110px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    form {
+        width: 70%;
+        padding: 30px;
+    }
+
+    #botones,
+    #botones2 {
+        width: 90px;
+        height: 30px;
+        font-size: 15px;
+    }
+}
+
+/* Extra: pantallas muy grandes >1024px */
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 150px; /* tamaño máximo */
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    form {
+        width: 500px;
+        padding: 30px;
+    }
+}

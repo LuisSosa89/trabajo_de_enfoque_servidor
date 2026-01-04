@@ -1,0 +1,81 @@
+/* Contenedor general del popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Contenido del popup */
+.popup-contenido {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Botones dentro del popup */
+.popup-contenido button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Botón de eliminar cuenta */
+#eliminarCuenta {
+    background-color: red;
+    color: white;
+}
+
+/* Botón de cancelar */
+#cancelarPopup {
+    background-color: gray;
+    color: white;
+}
+
+/* Media queries responsive */
+
+/* Para tablets y móviles */
+@media (max-width: 768px) {
+    .popup-contenido {
+        width: 80%;
+        /* Ocupa 80% del ancho */
+        padding: 15px 20px;
+        /* Menos padding */
+    }
+
+    .popup-contenido button {
+        padding: 8px 16px;
+        margin: 5px;
+        /* Más separación vertical */
+        font-size: 14px;
+    }
+}
+
+/* Para móviles pequeños */
+@media (max-width: 480px) {
+    .popup-contenido {
+        width: 90%;
+        /* Ocupa casi todo el ancho */
+        padding: 10px 15px;
+    }
+
+    .popup-contenido button {
+        width: 100%;
+        /* Botones ocupan toda la fila */
+        padding: 10px 0;
+        margin: 5px 0;
+        /* Separación vertical */
+        font-size: 14px;
+    }
+}

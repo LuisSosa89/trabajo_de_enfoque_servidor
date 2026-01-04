@@ -1,0 +1,252 @@
+/* ================= RESET Y ESTILO GENERAL ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ================= CABECERA ================= */
+#cabecera {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: cadetblue;
+    text-align: center;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: clamp(48px, 10vw, 120px);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= ICONOS ================= */
+#iconos {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+#usuario {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+#logo_carro {
+    position: relative;
+}
+
+#carro {
+    width: 50px;
+    height: 50px;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* ================= MENÚ USUARIO ================= */
+#menu_usuario {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    min-width: 180px;
+    z-index: 1000;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+#menu_usuario.mostrar {
+    display: block;
+    max-height: 500px;
+}
+
+#menu_usuario li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#menu_usuario li a:hover {
+    background: #444;
+}
+
+/* ================= CONTENEDOR PRINCIPAL ================= */
+#cuerpo {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ================= HISTORIAL DE COMPRAS ================= */
+.historial_compras {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.producto {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.producto img {
+    width: 25%;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.producto p {
+    font-weight: bold;
+    margin: 5px 15px;
+    font-size: clamp(16px, 2vw, 20px);
+    color: #333;
+}
+
+/* ================= FORMULARIO ================= */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border-radius: 5px;
+    width: 100%;
+}
+
+#botones, #botones2 {
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+#botones:hover, #botones2:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: cadetblue;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+#parrafo_footer p {
+    font-size: 16px;
+    color: black;
+}
+
+#logo_footer {
+    display: flex;
+    gap: 10px;
+}
+
+#logo_footer img {
+    width: 40px;
+    height: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    h1 { font-size: 80px; }
+    h2 { font-size: 28px; }
+    #usuario { width: 55px; height: 55px; }
+    #carro { width: 48px; height: 48px; }
+    #contador-carrito { font-size: 14px; }
+    .producto img { width: 30%; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 60px; text-align: center; }
+    h2 { font-size: 26px; }
+    #usuario { width: 50px; height: 50px; }
+    #carro { width: 45px; height: 45px; }
+    .producto { flex-direction: column; align-items: center; }
+    .producto img { width: 60%; height: auto; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 40px; text-align: center; }
+    h2 { font-size: 24px; }
+    #usuario { width: 45px; height: 45px; }
+    #carro { width: 40px; height: 40px; }
+    #contador-carrito { font-size: 12px; }
+    .producto { width: 95%; flex-direction: column; align-items: center; }
+    .producto img { width: 80%; max-width: 250px; }
+    form { width: 80%; padding: 20px; }
+    fieldset {width: 80%;}
+    #botones, #botones2 { width: 70px; height: 25px; font-size: 13px; }
+    footer { flex-direction: column; text-align: center; gap: 10px; }
+}

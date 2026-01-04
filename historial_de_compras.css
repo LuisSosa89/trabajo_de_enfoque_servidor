@@ -1,0 +1,238 @@
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
+}
+
+/* ================= CABECERA ================= */
+#cabecera {
+    position: sticky;
+    top: 0;
+    background-color: cadetblue;
+    text-align: center;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+/* ================= TITULO ================= */
+h1 {
+    font-size: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= ICONOS ================= */
+#iconos {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* Usuario */
+#logo_menu {
+    position: relative;
+}
+
+#usuario {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/* ================= MENÚ USUARIO ================= */
+#menu_usuario {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    list-style: none;
+    min-width: 180px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+#menu_usuario.mostrar {
+    display: block;
+}
+
+#menu_usuario li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#menu_usuario li a:hover {
+    background: #444;
+}
+
+/* ================= CARRO + CONTADOR ================= */
+#logo_carro {
+    position: relative;
+}
+
+#carro {
+    width: 50px;
+    height: 50px;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* ================= CUERPO ================= */
+#cuerpo {
+    min-height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================= HISTORIAL ================= */
+.historial_compras {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.producto img {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.producto p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    margin-top: 40px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+#parrafo_footer p {
+    font-size: 18px;
+}
+
+#logo_footer {
+    display: flex;
+    gap: 10px;
+}
+
+#logo_footer img {
+    width: 40px;
+    height: 40px;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    .producto p {
+        font-size: 16px;
+    }
+}
+
+/* ================= MOVIL ================= */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    #iconos {
+        position: static;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    #usuario {
+        width: 50px;
+        height: 50px;
+    }
+
+    #carro {
+        width: 45px;
+        height: 45px;
+    }
+
+    .producto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .producto img {
+        width: 70%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #menu_usuario {
+        min-width: 95vw;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 0;
+    }
+}
+
+/* ================= MOVIL PEQUEÑO ================= */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #contador-carrito {
+        font-size: 12px;
+        padding: 2px 5px;
+    }
+}

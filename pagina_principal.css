@@ -1,0 +1,164 @@
+ /* ----------------- Estilo general ----------------- */
+ body {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     min-height: 100vh;
+     font-family: 'Courier New', Courier, monospace;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+ }
+
+ /* ----------------- Cuerpo de la página ----------------- */
+ #cuerpo {
+     background-color: cadetblue;
+     width: 100%;
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     box-sizing: border-box;
+ }
+
+ h1 {
+     font-size: 100px;
+     width: 100%;
+     text-align: center;
+     margin: 0 0 40px 0;
+ }
+
+ /* ----------------- Contenedor de botones ----------------- */
+ .botones {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+     /* espacio entre botones */
+     flex-wrap: wrap;
+     /* se adapta en móviles */
+ }
+
+ button {
+     background-color: black;
+     color: white;
+     height: 50px;
+     width: 150px;
+     border-radius: 10px;
+     border: none;
+     font-size: 20px;
+     transition: transform 0.3s;
+ }
+
+ button:hover {
+     cursor: pointer;
+     transform: scale(1.1);
+ }
+
+ /* ----------------- Pie de página ----------------- */
+ footer {
+     width: 100%;
+     background-color: cadetblue;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+     padding: 10px 20px;
+     box-sizing: border-box;
+ }
+
+ #parrafo_footer p {
+     margin: 1px;
+     font-size: 20px;
+     color: black;
+ }
+
+ #logo_footer {
+     display: flex;
+     gap: 10px;
+     justify-content: flex-end;
+     align-items: center;
+     width: auto;
+     height: 60px;
+ }
+
+ #logo_footer img {
+     width: 40px;
+     height: 40px;
+ }
+
+ /* ----------------- Responsive ----------------- */
+
+ /* Móviles (<=480px) */
+ @media screen and (max-width: 480px) {
+     h1 {
+         text-align: center;
+         font-size: 40px;
+     }
+
+     button {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 120px;
+         height: 40px;
+         font-size: 16px;
+         margin: 5px;
+     }
+
+     #parrafo_footer p {
+         font-size: 14px;
+         text-align: center;
+     }
+
+     footer {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     #logo_footer {
+         justify-content: center;
+         margin-top: 10px;
+     }
+ }
+
+ /* Tablets (481px - 768px) */
+ @media screen and (max-width: 768px) and (min-width: 481px) {
+     h1 {
+         font-size: 70px;
+     }
+
+     button {
+         width: 140px;
+         height: 45px;
+         font-size: 18px;
+     }
+
+     #parrafo_footer p {
+         font-size: 16px;
+         text-align: center;
+     }
+
+     #logo_footer {
+         margin-top: 10px;
+     }
+ }
+
+ /* Escritorio (>768px) */
+ @media screen and (min-width: 769px) {
+     h1 {
+         font-size: 100px;
+     }
+
+     button {
+         width: 150px;
+         height: 50px;
+         font-size: 20px;
+     }
+
+     #parrafo_footer p {
+         font-size: 20px;
+     }
+ }

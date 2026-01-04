@@ -1,0 +1,147 @@
+/*Estilo general*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+
+/*Cuerpo de la página*/
+
+#cuerpo {
+    background-color: cadetblue;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+}
+
+
+
+/* Grid de productos */
+.producto_tabla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas en desktop */
+    gap: 20px;
+    width: 90%;
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+.producto {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    transition: transform 0.2s;
+
+}
+
+.producto img {
+    width: 100%;
+    /* ocupa todo el ancho del contenedor */
+    max-height: 200px;
+    /* altura máxima uniforme */
+    object-fit: cover;
+    /* recorta la imagen sin deformarla */
+    border-radius: 5px;
+    ;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto-nombre {
+    font-weight: bold;
+    margin: 5px 0;
+    color: black;
+    font-size: 20px;
+}
+
+.producto-precio {
+    color: black;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.producto a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .producto_tabla {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en tablets */
+        gap: 15px;
+        
+    }
+
+    h2 { text-align: center;}
+}
+
+
+
+@media (max-width: 600px) {
+    .producto_tabla {
+        grid-template-columns: 1fr;
+        /* 1 columna en móviles */
+        gap: 10px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 60px;
+        /* reducir tamaño del título */
+    }
+
+    h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .producto-nombre,
+    .producto-precio {
+        font-size: 18px;
+        /* ajustar tamaño de texto */
+    }
+}
+
+@media (max-width: 480px) {
+ h2 { text-align: center;}
+}
+

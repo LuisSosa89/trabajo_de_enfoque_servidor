@@ -1,0 +1,238 @@
+/*Estilo general*/
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: cadetblue;
+}
+
+/* Titulares */
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+
+/*Cuerpo de la página*/
+#cuerpo {
+    background-color: cadetblue;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+}
+
+
+
+/* Grid de productos */
+.producto_tabla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas en desktop */
+    gap: 20px;
+    width: 90%;
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+.producto {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    transition: transform 0.2s;
+    cursor: pointer;
+
+}
+
+.producto img {
+    width: 100%;
+    /* ocupa todo el ancho del contenedor */
+    max-height: 200px;
+    /* altura máxima uniforme */
+    object-fit: cover;
+    /* recorta la imagen sin deformarla */
+    border-radius: 5px;
+    ;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto-nombre {
+    font-weight: bold;
+    margin: 5px 0;
+    color: black;
+    font-size: 20px;
+}
+
+.producto-precio {
+    color: black;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.producto a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Fondo oscuro del modal */
+#modalEliminar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Caja del modal */
+.modal-contenido {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Texto */
+.modal-contenido p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor de botones */
+.modal-botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Botones */
+.modal-botones button {
+    font-family: 'Courier New', Courier, monospace;
+    flex: 1;
+    padding: 10px 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Botón eliminar */
+#confirmarEliminar {
+    background: #e74c3c;
+    color: #fff;
+}
+
+#confirmarEliminar:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Botón cancelar */
+#cancelarEliminar {
+    background: #bdc3c7;
+    color: #2c3e50;
+}
+
+#cancelarEliminar:hover {
+    background: #95a5a6;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .producto_tabla {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .producto_tabla {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas */
+    }
+
+    .producto img {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .producto_tabla {
+        grid-template-columns: 1fr;
+        /* 1 columna en móviles */
+    }
+
+    .producto img {
+        max-height: 120px;
+    }
+
+    .modal-contenido {
+        width: 80%;
+        padding: 20px;
+        font-size: 16px;
+
+    }
+
+    .modal-botones button {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+}

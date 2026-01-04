@@ -1,0 +1,121 @@
+/* ================== ESTILO GENERAL ================== */
+body {
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    min-height: 100vh; 
+    font-family: 'Courier New', Courier, monospace; 
+    color: black; 
+    background-color: cadetblue; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+/* ================== CABECERA ================== */
+#cabecera {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+}
+
+/* ================== TITULO PRINCIPAL ================== */
+h1 {
+    font-family:'Courier New', Courier, monospace; 
+    font-size: 100px; 
+    color: black; 
+    text-align: center;
+}
+
+/* ================== ENLACES ================== */
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* ================== CUERPO ================== */
+#cuerpo {
+    display:flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* ================== SUBTITULOS ================== */
+h2 {
+    font-size: 40px; 
+    text-align: center;
+}
+
+/* ================== FORMULARIO ================== */
+form {
+    font-family: 'Courier New', Courier, monospace; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white; 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 500px; /* ancho por defecto */
+}
+
+fieldset {
+    border-radius: 5px; 
+    width: 100%; 
+}
+
+/* ================== BOTONES ================== */
+#botones, #botones2 {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#botones:hover, #botones2:hover {
+    cursor: pointer; 
+    transform: scale(1.1); 
+    transition: transform 0.3s; 
+}
+
+/* ================== RESPONSIVE ================== */
+
+/* Móviles muy pequeños (<480px) */
+@media (max-width: 480px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 20px; }
+    form { width: 95%; padding: 15px; }
+    #botones, #botones2 { width: 70px; height: 28px; font-size: 13px; }
+}
+
+/* Móviles medianos / tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    h1 { font-size: 80px; }
+    h2 { font-size: 28px; }
+    form { width: 50%; padding: 25px; }
+    #botones, #botones2 { width: 80px; height: 30px; font-size: 14px; }
+}
+
+/* Tablets grandes / laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 { font-size: 110px; }
+    h2 { font-size: 32px; }
+    form { width: 70%; padding: 30px; }
+    #botones, #botones2 { width: 90px; height: 30px; font-size: 15px; }
+}
+
+/* Escritorio grande (>1024px) */
+@media (min-width: 1025px) {
+    h1 { font-size: 150px; }
+    h2 { font-size: 40px; }
+    form { width: 500px; padding: 30px; }
+    #botones, #botones2 { width: 90px; height: 30px; font-size: 15px; }
+}
+
+

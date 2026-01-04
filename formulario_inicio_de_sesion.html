@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulario_inicio_de_sesion.css">
+</head>
+
+<body>
+
+    <!--cabecera de la página-->
+
+    <div id="cabecera">
+        <h1><a href="pagina_principal.html">DAVANT SNEAKERS</a></h1>
+    </div>
+
+    <!--Cuerpo de la página-->
+
+    <div id="cuerpo">
+        <h2>Inicio de sesión</h2>
+
+        <!--Formulario para iniciar sesion-->
+
+        <div id="caja_formulario">
+            <form action="verificar_sesion.php" method="POST">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" size="40" required><br><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password" size="40" required><br><br>
+
+                <!--Botón para ir al formulario de registro si no estás registrado-->
+
+                <input id="botones" type="submit" value="Enviar">
+                <input id="botones2" type="reset" value="Borrar">
+            </form>
+        </div>
+    </div>
+
+    <!--Pie de página-->
+
+    <footer>
+        <div id="parrafo_footer">
+            <p>Davant Sneakers</p><br>
+            <p>Calle Sin salida s/n CP 47896 Sevilla (Sevilla)</p><br>
+            <p>Teléfono 900 900 900</p><br>
+        </div>
+        <div id="logo_footer">
+            <img src="Logos/facebook.png" style="filter: invert(100%);" alt="Facebook logo">
+            <img src="Logos/instagram.png" style="filter: invert(100%);" alt="Logo de instagram">
+            <img src="Logos/twitter.png" style="filter: invert(100%);" alt="Logo de twitter">
+        </div>
+    </footer>
+</body>
+
+</html>
